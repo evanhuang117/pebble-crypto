@@ -173,7 +173,12 @@ function displayStuff(){
 			title:parseFloat(fixAmount).toFixed(2)
 		});
 	}
-		
+	menuView.push({
+		title:prices[3].amount,
+		icon:'images/ethicon.png',
+		subtitle:prices[3].currency+" Coinbase"
+	});
+
 	menuView.push({
 		title:prices[0].amount,
 		icon:'images/btcicon.png',
@@ -185,18 +190,8 @@ function displayStuff(){
 		icon:'images/ltcicon.png',
 		subtitle:prices[1].currency+" Coinbase"
 	});
-
-	menuView.push({
-		title:prices[2].amount,
-		icon:'images/bchicon.png',
-		subtitle:prices[2].currency+" Coinbase"
-	});
 	
-	menuView.push({
-		title:prices[3].amount,
-		icon:'images/ethicon.png',
-		subtitle:prices[3].currency+" Coinbase"
-	});
+
 
 	
   // Add data & style to menu
@@ -391,11 +386,11 @@ function loadPrices(){
 			});
 
 			prices.push({
-				base:data.data[3].base,
-				amount:data.data[3].amount,
-				currency:data.data[3].currency
+				base:data.data[6].base,
+				amount:data.data[6].amount,
+				currency:data.data[6].currency
 			});
-			
+
 			prices.push({
 				base:data.data[1].base,
 				amount:data.data[1].amount,
@@ -403,9 +398,9 @@ function loadPrices(){
 			});
 			
 			prices.push({
-				base:data.data[2].base,
-				amount:data.data[2].amount,
-				currency:data.data[2].currency
+				base:data.data[3].base,
+				amount:data.data[3].amount,
+				currency:data.data[3].currency
 			});
 			
 			loadBTCWallet();
